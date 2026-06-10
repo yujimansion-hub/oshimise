@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>お店デビュー診断｜推し店デビュー（無料・10問）</title>
-<meta name="description" content="無料・10問。いま借りるべきか／まだか、防げる損の目安、使える制度、次の一手、1日向き／3か月向きが、その場でわかります。">
+<title>お店デビュー診断｜推し店デビュー（無料・11問）</title>
+<meta name="description" content="無料・11問。いま借りるべきか／まだか、防げる損の目安、使える制度、次の一手、1日向き／3か月向きが、その場でわかります。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -28,12 +28,12 @@
   .top .logo span{color:var(--rose);}
   .top .free{margin-left:auto;font-family:var(--mincho);font-weight:700;color:var(--rose-d);font-size:14px;}
 
-  /* hero intro */
-  .intro{background:radial-gradient(ellipse at 70% 0,var(--blush),transparent 60%),linear-gradient(170deg,var(--cream),var(--cream2));padding:46px 0 34px;text-align:center;}
-  .intro .ey{font-weight:700;font-size:12px;letter-spacing:.24em;color:var(--terra);margin-bottom:12px;}
-  .intro h1{font-size:clamp(23px,4.4vw,32px);color:var(--ink);margin-bottom:14px;}
-  .intro p{font-size:15px;color:#5A4A42;max-width:560px;margin:0 auto;}
-  .intro .meta{margin-top:16px;font-size:13px;color:var(--soft);}
+  /* hero intro (最強のナラティブ仕様) */
+  .intro{background:radial-gradient(ellipse at 70% 0,var(--blush),transparent 60%),linear-gradient(170deg,var(--cream),var(--cream2));padding:54px 0 38px;text-align:left;}
+  .intro .ey{font-weight:700;font-size:12px;letter-spacing:.16em;color:var(--rose-d);border-bottom:2px solid var(--rose);padding-bottom:3px;display:inline-block;margin-bottom:24px;}
+  .intro h1{font-family:var(--mincho);font-size:clamp(16px,2.8vw,20px);color:var(--soft);line-height:2.1;margin-bottom:28px;font-weight:600;}
+  .intro p{font-family:var(--mincho);font-weight:800;font-size:clamp(22px,4.5vw,30px);line-height:1.5;color:var(--ink);margin-bottom:12px;}
+  .intro .meta{margin-top:20px;font-size:13px;color:var(--soft);text-align:center;background:rgba(255,255,255,0.5);padding:6px;border-radius:6px;}
   .intro .meta b{color:var(--rose-d);}
 
   /* progress */
@@ -43,22 +43,18 @@
   .prog .txt{font-size:12px;color:var(--soft);margin-top:6px;text-align:right;font-weight:700;}
 
   /* questions */
-  .q{padding:26px 0;border-bottom:1px dashed var(--line);}
-  .q .qn{font-family:var(--mincho);font-weight:700;font-size:13px;color:var(--rose);margin-bottom:6px;}
-  .q .qt{font-family:var(--mincho);font-weight:700;font-size:18px;color:var(--ink);margin-bottom:14px;line-height:1.6;}
-  .q .qt .sub{display:block;font-family:var(--gothic);font-weight:500;font-size:13px;color:var(--soft);margin-top:4px;}
+  .q{padding:32px 0;border-bottom:1px dashed var(--line);transition:opacity 0.3s;}
+  .q .qn{font-family:var(--mincho);font-weight:700;font-size:14px;color:var(--rose);margin-bottom:6px;}
+  .q .qt{font-family:var(--mincho);font-weight:700;font-size:19px;color:var(--ink);margin-bottom:16px;line-height:1.6;}
   .opts{display:grid;gap:10px;}
-  .opt{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;cursor:pointer;transition:all .18s ease;font-size:15px;}
-  .opt:hover{border-color:var(--rose);}
+  .opt{display:flex;align-items:center;gap:12px;background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:14px 18px;cursor:pointer;transition:all .18s ease;font-size:15px;}
+  .opt:hover{border-color:var(--rose);background:var(--card);}
   .opt input{accent-color:var(--rose);width:18px;height:18px;flex:none;}
-  .opt.sel{border-color:var(--rose);background:var(--blush);}
-  .opt.sel .dot{background:var(--rose);}
-  textarea,input[type=text],input[type=email]{width:100%;font-family:var(--gothic);font-size:15px;border:1.5px solid var(--line);border-radius:12px;padding:13px 16px;background:var(--card);color:var(--ink);resize:vertical;}
-  textarea:focus,input:focus{outline:none;border-color:var(--rose);}
+  .opt.sel{border-color:var(--rose);background:var(--blush);font-weight:700;}
 
   /* button */
-  .actions{padding:30px 0 60px;text-align:center;}
-  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--gothic);font-weight:700;font-size:17px;padding:17px 42px;border-radius:999px;border:none;cursor:pointer;background:var(--rose);color:#fff;box-shadow:0 10px 26px rgba(192,105,122,.32);transition:all .2s ease;}
+  .actions{padding:40px 0 60px;text-align:center;}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--gothic);font-weight:700;font-size:17px;padding:17px 42px;border-radius:999px;border:none;cursor:pointer;background:var(--rose);color:#fff;box-shadow:0 10px 26px rgba(192,105,122,.32);transition:all .2s ease;text-decoration:none;}
   .btn:hover{background:var(--rose-d);transform:translateY(-2px);}
   .btn:disabled{opacity:.5;cursor:not-allowed;transform:none;}
   .note{font-size:12.5px;color:var(--soft);margin-top:14px;}
@@ -72,25 +68,22 @@
   .verdict.wait{background:linear-gradient(150deg,#5B4A52,var(--ink));}
   .verdict .lbl{font-weight:700;font-size:13px;letter-spacing:.1em;opacity:.9;margin-bottom:8px;}
   .verdict h2{font-size:clamp(22px,4vw,30px);color:#fff;margin-bottom:10px;}
-  .verdict p{font-size:14.5px;color:rgba(255,255,255,.92);}
+  .verdict p{font-size:14.5px;color:rgba(255,255,255,.92);line-height:1.7;}
   .rcard{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin-bottom:16px;}
   .rcard h3{font-size:16px;color:var(--rose-d);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
   .rcard h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);}
   .rcard p,.rcard li{font-size:14.5px;color:#4A3F39;line-height:1.85;}
   .rcard ul{list-style:none;margin-top:6px;}
-  .rcard li{padding-left:20px;position:relative;}
+  .rcard li{padding-left:20px;position:relative;margin-bottom:6px;}
   .rcard li::before{content:"✦";position:absolute;left:0;color:var(--gold);}
-  .rcard .big{font-family:var(--mincho);font-weight:800;font-size:26px;color:var(--rose-d);}
+  .rcard .big{font-family:var(--mincho);font-weight:800;font-size:26px;color:var(--rose-d);margin:6px 0;}
   .rcard .recommend{font-family:var(--mincho);font-weight:700;font-size:18px;color:var(--ink);}
   .rcta{text-align:center;margin-top:24px;}
   .rcta .btn{margin:6px;}
-  .rcta .btn.outline{background:transparent;color:var(--rose-d);border:1.5px solid var(--rose);box-shadow:none;}
-  .rcta .btn.outline:hover{background:var(--rose);color:#fff;}
   .disc{font-size:11.5px;color:var(--soft);margin-top:20px;line-height:1.8;text-align:center;}
   .leadbox{background:var(--blush);border-radius:16px;padding:22px;margin-top:24px;}
   .leadbox h3{font-family:var(--mincho);font-weight:700;font-size:16px;margin-bottom:6px;}
   .leadbox p{font-size:13px;color:#5A4A42;margin-bottom:12px;}
-  .leadbox .row{display:grid;gap:10px;}
   #copy_zone{background:#fff;border:2px dashed var(--rose);border-radius:12px;padding:14px;text-align:center;margin:14px 0 18px;}
   #copy_zone .cz_lbl{font-size:12px;color:var(--soft);font-weight:700;display:block;margin-bottom:4px;}
   #diag_code{font-family:monospace;font-size:19px;font-weight:700;color:var(--rose-d);letter-spacing:1px;cursor:pointer;}
@@ -120,18 +113,25 @@
 </div></div>
 
 <div class="intro"><div class="wrap">
-  <div class="ey">FREE DIAGNOSIS ─ 10問・約10分</div>
-  <h1>いま借りるべきか、まだか。<br>10問でわかります。</h1>
-  <p>答えるだけで、あなたに合った進み方・防げる損の目安・使える制度・次の一手、そして「1日向き／3か月向き」がその場でわかります。</p>
-  <div class="meta"><b>無料</b>・登録不要・約10分</div>
+  <div class="ey">お店を借りる前の「1日限定デビュー」</div>
+  <h1>
+    「いつかお店をやりたい」<br>
+    そう言いながら、一歩を踏み出せない人を、<br>
+    私は20年間見てきました。<br>
+    <br>
+    でも、あなたは、まだ終わらせなくていい。
+  </h1>
+  <p>まずは大津の街で、1日だけ「店主」になってみる。<br>あなたの“いつかは”に、日付を入れるためのステップ診断。</p>
+  <div class="meta"><b>登録不要・完全無料</b>（約3分で「防げる損の目安」を判定）</div>
 </div></div>
 
 <div class="prog"><div class="wrap">
   <div class="bar"><div class="fill" id="fill"></div></div>
-  <div class="txt" id="ptxt">0 / 10 問</div>
+  <div class="txt" id="ptxt">0 / 11 問</div>
 </div></div>
 
-<form id="quiz"><div class="wrap" id="qwrap"></div>
+<form id="quiz">
+  <div class="wrap" id="qwrap"></div>
   <div class="wrap actions">
     <button type="button" class="btn" id="submit">診断結果を見る →</button>
     <div class="err" id="err">すべての質問にお答えください。</div>
@@ -141,7 +141,7 @@
 
 <div class="result" id="result"><div class="wrap">
   <div class="verdict" id="verdict">
-    <div class="lbl" id="vlbl"></div>
+    <div class="lbl" id="vlbl">診断結果</div>
     <h2 id="vttl"></h2>
     <p id="vsub"></p>
   </div>
@@ -168,7 +168,7 @@
   <div class="rcard">
     <h3>使える可能性のある制度</h3>
     <ul id="programs"></ul>
-    <p style="font-size:12.5px;color:var(--soft);margin-top:8px;">※利用可否・金額は要件と審査により異なります。認定経営革新等支援機関として、申請の伴走支援が可能です。</p>
+    <p style="font-size:12.5px;color:var(--soft);margin-top:8px;">※利用可否・金額は要件と審査により異なります。<span id="expert_title">創業支援の専門家</span>として、申請の伴走支援が可能です。</p>
   </div>
 
   <div class="rcard">
@@ -178,29 +178,26 @@
 
   <div class="leadbox">
     <h3>診断結果の詳しい解説を受け取る（無料・任意）</h3>
-    <p>下のボタンから「推し店デビュー」公式LINEに登録し、<b>表示された【あなたの診断コード】をそのまま送信</b>してください。診断結果に合わせた具体的なアドバイスと、第1期モニターの空き枠状況を、個別にお返しします。</p>
+    <p>下のボタンから「推し店デビュー」公式LINEに登録し、<b>表示された【あなたの診断コード】をそのまま送信</b>してください。診断結果に合わせた具体的なアドバイスと、本出店（審査制・月2組）の枠の状況を、個別にお返しします。</p>
+    <p style="font-size:11.5px;color:var(--soft);">※お送りいただいた診断コードとご相談内容は、診断結果の解説と当サービスのご案内のためにのみ利用します。</p>
     <div id="copy_zone">
-      <span class="cz_lbl">▼ あなたの診断コード（長押し／クリックでコピー）</span>
+      <span class="cz_lbl">▼ あなたの診断コード（タップしてコピー）</span>
       <div id="diag_code" tabindex="0">---</div>
       <span class="cz_done" id="cz_done">コピーしました</span>
     </div>
     <div class="rcta">
-      <!-- ★公式LINEの友だち追加URLに差し替え（未設定時はクリックで案内） -->
       <a class="btn line" id="lineBtn" href="https://line.me/R/ti/p/@907kxssd">LINEで詳しい解説を受け取る（無料）→</a>
     </div>
-    <p style="text-align:center;font-size:12px;color:var(--soft);margin-bottom:10px;">LINE・メールでのご相談、第1期モニターのお申し込みも受付中です。</p>
     <div class="contactbox2">
       <div class="crow">
         <a href="https://line.me/R/ti/p/@907kxssd" class="citem cline"><span class="cl">LINE（おすすめ）</span><span class="cv">友だち追加して相談</span></a>
-        <a href="mailto:info@bridgecycleco.com?subject=お店デビュー診断からの相談・申込&body=お名前／業種／診断結果／ご希望（1日・3か月・第1期モニター）／ご連絡先をご記入ください。" class="citem"><span class="cl">メール</span><span class="cv">info@bridgecycleco.com</span></a>
+        <a href="mailto:info@bridgecycleco.com?subject=お店デビュー診断からの相談・申込&body=お名前／業種／診断結果／ご希望（1日・3か月）／ご連絡先をご記入ください。" class="citem"><span class="cl">メール</span><span class="cv">info@bridgecycleco.com</span></a>
       </div>
-      <p style="text-align:center;font-size:12.5px;color:var(--soft);margin-top:10px;">第1期モニター（1日5万円／3か月12万円）希望の方も、上記からどうぞ。</p>
-    </div>
-    <div style="display:none">
+      <p style="text-align:center;font-size:12.5px;color:var(--soft);margin-top:14px;">参加費は、1日デビュー9,800円＋売上の15%（上限3万円）／3か月デビュー 月19,800円＋売上の15%（月上限3万円）。売れなかった場合の追加負担はありません。</p>
     </div>
   </div>
 
-  <p class="disc">この診断結果は、入力内容にもとづく一般的な目安です。融資・補助金・物件契約の可否や成果を保証するものではありません。具体的な税務・融資・許認可については、税理士・金融機関・所轄行政庁・当社（認定経営革新等支援機関）にご相談ください。</p>
+  <p class="disc">この診断結果は、入力内容にもとづく一般的な目安です。融資・補助金・物件契約の可否や成果を保証するものではありません。具体的な税務・融資・許認可については、税理士・金融機関・所轄行政庁・<span id="disclaim_title">当社</span>にご相談ください。</p>
 </div></div>
 
 <footer>
@@ -276,17 +273,28 @@ const QUESTIONS = [
   ]},
 ];
 
-// render
+// 2026年6月23日以降、認定経営革新等支援機関の表記へ自動更新する時限処理
+// ※注意: 6/23は認定確認の「予定日」です。万一、当日に認定通知が確認できなかった場合は、
+//   必ずこの targetDate を実際の認定日に変更してください（事実より先に名乗ることはできません）。
+//   index.html にも同一の時限処理が入っています。変更する場合は両方を揃えてください。
+const targetDate = new Date("2026-06-23T00:00:00+09:00");
+if (new Date() >= targetDate) {
+  const exp = document.getElementById("expert_title"); if(exp) exp.textContent = "認定経営革新等支援機関";
+  const dis = document.getElementById("disclaim_title"); if(dis) dis.textContent = "当社（認定経営革新等支援機関）";
+}
+
+// レンダリング
 const qwrap = document.getElementById('qwrap');
 QUESTIONS.forEach((qq,i)=>{
   const div=document.createElement('div');
   div.className='q';
+  div.id = `q_box_${i}`;
   let opts=qq.opts.map(o=>`<label class="opt"><input type="radio" name="${qq.id}" value="${o.v}"><span>${o.t}</span></label>`).join('');
   div.innerHTML=`<div class="qn">Q${i+1}</div><div class="qt">${qq.q}</div><div class="opts">${opts}</div>`;
   qwrap.appendChild(div);
 });
 
-// progress + selection styling
+// 進捗更新 & 動的バインド
 function update(){
   let answered=0;
   QUESTIONS.forEach(qq=>{ if(document.querySelector(`input[name="${qq.id}"]:checked`)) answered++; });
@@ -294,34 +302,60 @@ function update(){
   document.getElementById('fill').style.width=pct+'%';
   document.getElementById('ptxt').textContent=`${answered} / ${QUESTIONS.length} 問`;
 }
+
+// 選択時の挙動（オートスクロール制御含む）
 document.querySelectorAll('.opt').forEach(l=>{
-  l.addEventListener('click',()=>{
-    const name=l.querySelector('input').name;
+  l.addEventListener('click',(e)=>{
+    const radio = l.querySelector('input');
+    const name = radio.name;
+
     document.querySelectorAll(`input[name="${name}"]`).forEach(r=>r.closest('.opt').classList.remove('sel'));
-    l.classList.add('sel'); update();
+    l.classList.add('sel');
+    update();
+
+    // 現在の質問インデックスを特定
+    const currentIdx = QUESTIONS.findIndex(qq => qq.id === name);
+
+    // 最終問題（Q11）を選択した場合、ボタンを押さずに自動で結果算出へ遷移
+    if(currentIdx === QUESTIONS.length - 1) {
+      setTimeout(() => { triggerDiagnosis(); }, 250);
+    } else {
+      // 次の問題へスムーズに自動スクロール
+      const nextBox = document.getElementById(`q_box_${currentIdx + 1}`);
+      if(nextBox) {
+        setTimeout(() => {
+          window.scrollTo({ top: nextBox.offsetTop - 120, behavior: 'smooth' });
+        }, 200);
+      }
+    }
   });
 });
 
 function val(id){const e=document.querySelector(`input[name="${id}"]:checked`);return e?e.value:null;}
 
-document.getElementById('submit').addEventListener('click',()=>{
+document.getElementById('submit').addEventListener('click', triggerDiagnosis);
+
+function triggerDiagnosis(){
   const ans={}; let ok=true;
   QUESTIONS.forEach(qq=>{ans[qq.id]=val(qq.id); if(!ans[qq.id])ok=false;});
-  if(!ok){document.getElementById('err').classList.add('show');window.scrollTo({top:document.getElementById('qwrap').offsetTop-60,behavior:'smooth'});return;}
+  if(!ok){
+    document.getElementById('err').classList.add('show');
+    window.scrollTo({top:document.getElementById('qwrap').offsetTop-60,behavior:'smooth'});
+    return;
+  }
   document.getElementById('err').classList.remove('show');
   showResult(ans);
-});
+}
 
 function showResult(a){
-  // --- verdict: borrow now or wait ---
-  // "wait" if proof weak OR continuity low OR money tiny/no-data; "go" only if proof+continuity strong
+  // 判定ロジック
   let waitScore=0;
   if(a.proof==='none')waitScore+=2; if(a.proof==='some')waitScore+=1;
   if(a.continue==='low')waitScore+=2; if(a.continue==='mid')waitScore+=1;
   if(a.stage==='dream')waitScore+=2;
   if(a.worry==='sell')waitScore+=1;
   if(a.worry==='rust')waitScore+=1;
-  // 休眠美容師など、過去に実績がある復帰組はブランク不安を割り引く
+
   const returner = (a.stage==='dormant' || a.working==='returner');
   if(returner && a.proof!=='none') waitScore-=1;
   const go = waitScore<=1 && (a.proof==='repeat') && (a.continue!=='low');
@@ -329,7 +363,6 @@ function showResult(a){
   const v=document.getElementById('verdict');
   if(go){
     v.className='verdict go';
-    document.getElementById('vlbl').textContent='診断結果';
     if(returner){
       document.getElementById('vttl').textContent='現場に戻る準備は、ほぼ整っています。まずは“小さく一度”。';
       document.getElementById('vsub').textContent='技術と経験がある今、いきなり店や面貸し契約を決める前に、街で一度デビューして「勘」と「お客様の反応」を取り戻しましょう。';
@@ -339,7 +372,6 @@ function showResult(a){
     }
   }else{
     v.className='verdict wait';
-    document.getElementById('vlbl').textContent='診断結果';
     if(a.stage==='side' || a.goal==='keepside' || a.working==='employed'){
       document.getElementById('vttl').textContent='いきなり独立しなくて大丈夫。まず副業のまま、試せます。';
       document.getElementById('vsub').textContent='会社や家庭を続けながら、1日だけ街でデビュー。売れる手応えがついてから、次を考えれば十分です。';
@@ -349,7 +381,7 @@ function showResult(a){
     }
   }
 
-  // --- WHY: reasons for this verdict (based on answers) ---
+  // 理由カード生成
   const R=[];
   const catJP={hair:'美容師の施術',beauty:'ネイル・エステ等の施術',craft:'ハンドメイド・雑貨',food:'お菓子・食品',service:'教室・相談'};
   const stageJP={dream:'まだ販売経験が少ない段階',side:'本業を続けながら副業で始めたい段階',selling:'すでに売っている段階',dormant:'資格・経験はあり、現場復帰を考えている段階',planning:'開業を具体的に検討中'};
@@ -363,15 +395,14 @@ function showResult(a){
   if(a.continue==='low') R.push('続けて売れるかにまだ自信がないとのこと。だからこそ、いきなり契約せず継続需要を確かめる価値があります。');
   else if(a.continue==='high') R.push('継続して売れる手応えがある。3か月で「リピート率」という最強の証拠まで取りにいけます。');
   if(a.money==='tiny') R.push('大きなお金は使いたくない、という慎重さは正解です。小さく試して、損を最小化しましょう。');
-  if(a.worry==='sell') R.push('いちばんの不安が「そもそも売れるか」。この診断の本題そのものなので、まず1日のデビューで答えを出せます。');
+  if(a.worry==='sell') R.push('いちばんの不安が「そもそも売れるか」。この診断の本題そのものなので、まず 1 日のデビューで答えを出せます。');
   else if(a.worry==='cost') R.push('いちばんの不安が「お金」。だからこそ、不可逆な支出の前に確かめる意味が大きいです。');
-  else if(a.worry==='keep') R.push('いちばんの不安が「続けられるか」。継続需要は、3か月デビューで測れます。');
   else if(a.worry==='explain') R.push('いちばんの不安が「家族や周囲への説明」。数字と応援コメントは、何よりの説明材料になります。');
   else if(a.worry==='rust') R.push('いちばんの不安が「ブランク」。だからこそ、本番の契約前に一度だけ街で施術・販売して、感覚を確かめる価値があります。');
   else if(a.worry==='balance') R.push('いちばんの不安が「本業・家庭との両立」。1日単位のデビューなら、生活を崩さずに試せます。');
   document.getElementById('reasons').innerHTML=R.map(x=>`<li>${x}</li>`).join('');
 
-  // --- recommend course ---
+  // 推奨コース特定
   let rec, why, courseCode="1DAY-STD";
   if(a.stage==='side' || a.goal==='keepside' || a.working==='employed' || a.working==='home_maker'){
     rec='まずは「1日お店デビュー」（副業・両立に最適）';
@@ -392,7 +423,7 @@ function showResult(a){
   document.getElementById('recommend').textContent=rec;
   document.getElementById('recommend_why').textContent=why;
 
-  // --- loss-avoidance estimate by plan_type & category ---
+  // 初期費用損算定
   let lo,hi,note;
   if(a.plan_type==='home'){lo=5;hi=30;note='自宅・無店舗中心でも、設備・材料・広告などで意外と費用はかかります。';}
   else if(a.plan_type==='small_shop'){lo=80;hi=250;note='小さなテナント・間借りでも、保証金・内装・什器で初期費用がかさみます。';}
@@ -401,19 +432,19 @@ function showResult(a){
   if(a.category==='hair'){note+=' 美容師の独立は、シャンプー台・セット面など設備投資が大きい一方、まずは面貸し（シェアサロン）から戻る選択肢もあります。';}
   document.getElementById('loss').textContent=`約 ${lo} 〜 ${hi} 万円`;
   document.getElementById('loss_note').textContent=note+' デビューで先に確かめれば、この大半を「確かめてからの支出」に変えられます。';
-  // budget vs cost + debut comparison
+
   const budgetJP={tiny:'数万円まで',small:'数十万円まで',large:'百万円以上も検討'};
-  const debutCost = (courseCode==='3M-BIZ')?20:10;
+  const debutFee = (courseCode==='3M-BIZ')?'月19,800円＋売上の15%（月上限3万円）':'9,800円＋売上の15%（上限3万円）';
   let gapMsg='';
   if(a.money==='tiny' && hi>=80){ gapMsg=`あなたの「${budgetJP[a.money]}」という予算と、実際にかかりうる<b>約${hi}万円</b>には、大きな開きがあります。`; }
   else if(a.money==='small' && hi>=200){ gapMsg=`「${budgetJP[a.money]}」というご予算に対し、実店舗だと<b>約${hi}万円</b>規模になり得ます。`; }
   else { gapMsg=`大切なのは金額の大小より、その支出が<b>「確かめる前」か「確かめた後」か</b>です。`; }
   document.getElementById('loss_compare').innerHTML =
     `<p style="font-size:13.5px;line-height:1.9;color:#4A3F39;">${gapMsg}</p>`+
-    `<p style="font-size:13.5px;line-height:1.9;color:var(--rose-d);font-weight:700;margin-top:6px;">推し店デビュー（${debutCost}万円）で先に確かめれば、最大で約${hi}万円の“不可逆な支出”を、「売れると分かってからの投資」に変えられます。</p>`+
+    `<p style="font-size:13.5px;line-height:1.9;color:var(--rose-d);font-weight:700;margin-top:6px;">推し店デビュー（参加費${debutFee}）で先に確かめれば、最大で約${hi}万円の“不可逆な支出”を、「売れると分かってからの投資」に変えられます。売れなければ、追加の負担はありません。</p>`+
     `<p style="font-size:11.5px;color:var(--soft);margin-top:6px;">※金額は入力内容にもとづく一般的な目安です。実際の費用・成果を保証するものではありません。</p>`;
 
-  // --- programs ---
+  // 補助金・融資制度
   const progs=[];
   progs.push('小規模事業者持続化補助金〈創業型〉：販路開拓・広報・Web等（最大250万円・要件あり）');
   if(a.timing==='soon'||a.goal==='shop'){progs.push('日本政策金融公庫の創業融資：デビュー結果レポートを相談資料に');}
@@ -423,7 +454,7 @@ function showResult(a){
   progs.push('開業費としての経費計上：当サービス費用は開業すれば「開業費」に計上可能（補助金充当分を除く）');
   document.getElementById('programs').innerHTML=progs.map(p=>`<li>${p}</li>`).join('');
 
-  // --- next step ---
+  // 次の一手
   const ns=[];
   ns.push('無料相談で、あなたの商品・価格・お客様像を整理する（デビュー設計）');
   if(!go){ns.push('まず「1日お店デビュー」で、街の反応を数字で確かめる');}
@@ -435,23 +466,20 @@ function showResult(a){
   if(a.stage==='side'||a.working==='employed'){ns.push('本業の休日に合わせて、無理のないデビュー日を設計する');}
   document.getElementById('nextstep').innerHTML=ns.map(p=>`<li>${p}</li>`).join('');
 
-  // --- 診断コード生成（LINE引き継ぎ用・null安全）---
+  // 診断コード生成
   const up=(x,n)=>((x||'XX').toString().substring(0,n).toUpperCase());
   const diagCode = `${up(a.stage,2)}-${up(a.category,4)}-${up(a.working,3)}-${courseCode}`;
   const dc=document.getElementById('diag_code'); if(dc) dc.textContent=diagCode;
 
-  // show + scroll
-  const r=document.getElementById('result'); r.classList.add('show');
+  // 表示の切り替えとスクロール
   document.getElementById('quiz').style.display='none';
   document.querySelector('.prog').style.display='none';
+  const r=document.getElementById('result');
+  r.classList.add('show');
   window.scrollTo({top:0,behavior:'smooth'});
-
-  // OPTIONAL: send lead to Google Form (prefilled) — see companion doc for setup.
-  // Example (after creating the form, fill IDs):
-  // const params=new URLSearchParams({'entry.AAA':a.stage,'entry.BBB':a.category,'entry.CCC':rec});
-  // navigator.sendBeacon('https://docs.google.com/forms/d/e/XXXX/formResponse?'+params.toString());
 }
-// クリック/長押しで診断コードをコピー
+
+// コピー機能
 document.addEventListener('click',function(e){
   if(e.target && e.target.id==='diag_code'){
     const t=e.target.textContent;
