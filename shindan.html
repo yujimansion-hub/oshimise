@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>お店デビュー診断｜推し店デビュー（無料・11問）</title>
-<meta name="description" content="無料・11問。いま借りるべきか／まだか、防げる損の目安、使える制度、次の一手、1日向き／3か月向きが、その場でわかります。">
+<meta name="description" content="無料・11問。いま借りるべきか／まだか、防げる損の目安、使える制度、次の一手、あなたに合うステージが、その場でわかります。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
@@ -191,9 +191,9 @@
     <div class="contactbox2">
       <div class="crow">
         <a href="https://line.me/R/ti/p/@907kxssd" class="citem cline"><span class="cl">LINE（おすすめ）</span><span class="cv">友だち追加して相談</span></a>
-        <a href="mailto:info@bridgecycleco.com?subject=お店デビュー診断からの相談・申込&body=お名前／業種／診断結果／ご希望（1日・3か月）／ご連絡先をご記入ください。" class="citem"><span class="cl">メール</span><span class="cv">info@bridgecycleco.com</span></a>
+        <a href="mailto:info@bridgecycleco.com?subject=お店デビュー診断からの相談・申込&body=お名前／業種／診断結果／ご希望（ステージ1〜3・メンバーズ）／ご連絡先をご記入ください。" class="citem"><span class="cl">メール</span><span class="cv">info@bridgecycleco.com</span></a>
       </div>
-      <p style="text-align:center;font-size:12.5px;color:var(--soft);margin-top:14px;">参加費は、1日デビュー9,800円＋売上の15%（上限3万円）／3か月デビュー 月19,800円＋売上の15%（月上限3万円）。売れなかった場合の追加負担はありません。</p>
+      <p style="text-align:center;font-size:12.5px;color:var(--soft);margin-top:14px;">参加費は、各ステージ一律9,800円（ステージ1＝1日／2＝＋3日／3＝＋8日）。売上シェアはなく、当日の売上は全額あなたのものです。別途、店舗協力費（5,000〜15,000円/回）を協力店舗へ直接お支払いいただきます。</p>
     </div>
   </div>
 
@@ -393,7 +393,7 @@ function showResult(a){
   else if(a.proof==='some') R.push('ときどき売れている手応えがあります。これを「再現できる数字」に変えると、次の判断がぶれません。');
   else R.push('定期的に売れ、リピーターもいる——これは大きな強み。あとはその事実を“他人に見せられる形”にするだけです。');
   if(a.continue==='low') R.push('続けて売れるかにまだ自信がないとのこと。だからこそ、いきなり契約せず継続需要を確かめる価値があります。');
-  else if(a.continue==='high') R.push('継続して売れる手応えがある。3か月で「リピート率」という最強の証拠まで取りにいけます。');
+  else if(a.continue==='high') R.push('継続して売れる手応えがある。ステージ3まで進めば「リピート率」という最強の証拠まで取りにいけます。');
   if(a.money==='tiny') R.push('大きなお金は使いたくない、という慎重さは正解です。小さく試して、損を最小化しましょう。');
   if(a.worry==='sell') R.push('いちばんの不安が「そもそも売れるか」。この診断の本題そのものなので、まず 1 日のデビューで答えを出せます。');
   else if(a.worry==='cost') R.push('いちばんの不安が「お金」。だからこそ、不可逆な支出の前に確かめる意味が大きいです。');
@@ -405,20 +405,20 @@ function showResult(a){
   // 推奨コース特定
   let rec, why, courseCode="1DAY-STD";
   if(a.stage==='side' || a.goal==='keepside' || a.working==='employed' || a.working==='home_maker'){
-    rec='まずは「1日お店デビュー」（副業・両立に最適）';
-    why='本業や家庭を続けながら、1日だけ街に立てます。手応えと時間の余裕を見て、3か月や次の一歩へ無理なく広げられます。'; courseCode='1DAY-SIDE';
+    rec='まずは「ステージ1（1日デビュー）」（副業・両立に最適）';
+    why='本業や家庭を続けながら、1日だけ街に立てます。手応えと時間の余裕を見て、ステージ2（＋3日）や「推し店メンバーズ（月1出店の月額制）」へ無理なく広げられます。'; courseCode='1DAY-SIDE';
   }else if(returner){
-    rec='まずは「1日お店デビュー」で“勘ならし”を';
-    why='ブランクがあっても、まず1日。技術とお客様の反応を取り戻してから、面貸し・3か月・出店へ進むのが安全で確実です。'; courseCode='1DAY-RET';
+    rec='まずは「ステージ1（1日デビュー）」で“勘ならし”を';
+    why='ブランクがあっても、まず1日。技術とお客様の反応を取り戻してから、ステージ2・面貸し・出店へ進むのが安全で確実です。'; courseCode='1DAY-RET';
   }else if(a.continue==='low' || a.proof==='none' || a.money==='tiny'){
-    rec='まずは「1日お店デビュー」';
-    why='いきなり3か月より、1日で「売れるか・誰に届くか」をまず確かめるのが安全です。手応えがあれば、3か月へ進めます。'; courseCode='1DAY-SAFE';
+    rec='まずは「ステージ1（1日デビュー）」';
+    why='いきなり長期より、1日で「売れるか・誰に届くか」をまず確かめるのが安全です。手応えがあれば、ステージ2（＋3日）へ進めます。'; courseCode='1DAY-SAFE';
   }else if(a.goal==='shop' || a.goal==='succeed' || a.plan_type==='full_shop' || a.continue==='high'){
-    rec='「3か月お店デビュー」がおすすめ';
-    why='出店・承継・面貸しを視野に入れるなら、継続需要（リピート）の確認と、相談に使えるデビュー結果レポートまで揃う3か月が向いています。'; courseCode='3M-BIZ';
+    rec='「ステージ3（計12日の実証）」まで進む価値があります';
+    why='出店・承継・面貸しを視野に入れるなら、リピート（再来）の確認と、融資相談に使える実証データまで揃うステージ3向きです。まずステージ1から始め、手応えごとに1段ずつ進みます（各段9,800円）。'; courseCode='3M-BIZ';
   }else{
-    rec='まずは「1日お店デビュー」から';
-    why='1日で反応を確かめ、続けたくなったら3か月へ。段階的に進むのがいちばん損がありません。'; courseCode='1DAY-STD';
+    rec='まずは「ステージ1（1日デビュー）」から';
+    why='1日で反応を確かめ、続けたくなったらステージ2へ。1段進むごとに開業書類サポートが3万円ずつ安くなるので、段階的に進むのがいちばん損がありません。'; courseCode='1DAY-STD';
   }
   document.getElementById('recommend').textContent=rec;
   document.getElementById('recommend_why').textContent=why;
@@ -434,14 +434,14 @@ function showResult(a){
   document.getElementById('loss_note').textContent=note+' デビューで先に確かめれば、この大半を「確かめてからの支出」に変えられます。';
 
   const budgetJP={tiny:'数万円まで',small:'数十万円まで',large:'百万円以上も検討'};
-  const debutFee = (courseCode==='3M-BIZ')?'月19,800円＋売上の15%（月上限3万円）':'9,800円＋売上の15%（上限3万円）';
+  const debutFee = (courseCode==='3M-BIZ')?'各ステージ9,800円・売上シェアなし':'9,800円・売上シェアなし';
   let gapMsg='';
   if(a.money==='tiny' && hi>=80){ gapMsg=`あなたの「${budgetJP[a.money]}」という予算と、実際にかかりうる<b>約${hi}万円</b>には、大きな開きがあります。`; }
   else if(a.money==='small' && hi>=200){ gapMsg=`「${budgetJP[a.money]}」というご予算に対し、実店舗だと<b>約${hi}万円</b>規模になり得ます。`; }
   else { gapMsg=`大切なのは金額の大小より、その支出が<b>「確かめる前」か「確かめた後」か</b>です。`; }
   document.getElementById('loss_compare').innerHTML =
     `<p style="font-size:13.5px;line-height:1.9;color:#4A3F39;">${gapMsg}</p>`+
-    `<p style="font-size:13.5px;line-height:1.9;color:var(--rose-d);font-weight:700;margin-top:6px;">推し店デビュー（参加費${debutFee}）で先に確かめれば、最大で約${hi}万円の“不可逆な支出”を、「売れると分かってからの投資」に変えられます。売れなければ、追加の負担はありません。</p>`+
+    `<p style="font-size:13.5px;line-height:1.9;color:var(--rose-d);font-weight:700;margin-top:6px;">推し店デビュー（参加費${debutFee}・別途店舗協力費5,000円〜）で先に確かめれば、最大で約${hi}万円の“不可逆な支出”を、「売れると分かってからの投資」に変えられます。当日の売上は全額あなたのもの。売れなければ、追加の負担はありません。</p>`+
     `<p style="font-size:11.5px;color:var(--soft);margin-top:6px;">※金額は入力内容にもとづく一般的な目安です。実際の費用・成果を保証するものではありません。</p>`;
 
   // 補助金・融資制度
